@@ -1,0 +1,64 @@
+/* #timer {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: antiquewhite;
+}
+#duration {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    color: antiquewhite;
+}
+
+.name-ac {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(255, 138, 235);
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.btn {
+    background: #cf5291;
+    border: none;
+    border-radius: 60px;
+    color: white;
+    width: 200px;
+    padding: 10px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.btn-po {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 5px;
+} */
+
+.acitivity-right-timer-time{
+    margin-bottom: 5px;
+    text-align: center;
+}
+.acitivity-right-timer-time span {
+    font-size: 30px;
+}
+.acitivity-right-timer-time div {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.startStop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}

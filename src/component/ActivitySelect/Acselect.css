@@ -1,0 +1,142 @@
+/* #select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(96, 96, 119);
+}
+
+.ac-select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.sl-left {
+    margin: 30px;
+}
+.sl-mid {
+    margin: 30px;
+}
+.sl-right {
+    margin: 30px;
+}
+
+.btnac{
+    border: none;
+    background-color: rgb(32, 32, 32);
+    border-radius: 60px;
+}
+
+.btnac:hover {
+    background-color: rgb(71, 67, 67);
+} */
+/* 
+///////////////////////////////////// */
+.mainActivityPage {
+    color: aliceblue;
+    display: flex;
+    justify-content:  center;
+    /* align-items: flex-start; */
+    /* text-shadow: 2px 1px 4px #ffffffd7; */
+  }
+  
+  .button {
+      background-color: rgb(243, 82, 157);
+      border: none;
+      border-radius: 40px;
+     
+      padding: 5px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    
+  }
+  .button:hover{
+    background: rgb(231, 68, 155);
+    color: #fff;
+    box-shadow: 2px 3px 4px rgba(248, 248, 248, 0.055)
+  }
+  
+  .timerActivity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    
+    border-radius: 30px;
+    margin: 0px 30px;
+  }
+  
+  
+  .activityForm {
+    
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 30px;
+  }
+  .activity {
+    display: flex;
+    justify-content: center;
+    border: 3px solid rgb(255, 207, 207);
+  }
+  
+  .button-record {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* images */
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .s-select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .image {
+    height: 180px;
+    padding: 0 40px;
+    
+  }
+  
+  .right-arrow {
+    cursor: pointer;
+    width: 50px;
+    margin: 0 10px;
+  }
+  
+  .left-arrow {
+    cursor: pointer;
+    width: 50px;
+    margin: 0 10px;
+  }
+  
+  

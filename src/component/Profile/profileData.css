@@ -1,0 +1,10 @@
+.profile{
+    display: flex;
+    justify-content: center;
+}
+
+.userProfile{
+    border-style: solid;
+    border-radius: 10px;
+    
+}

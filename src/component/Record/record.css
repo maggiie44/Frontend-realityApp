@@ -1,0 +1,42 @@
+.record{
+    display: flex;
+    justify-content: center;
+}
+.record-title{
+    display: flex;
+    justify-content: center;
+}
+
+.record-box{
+    width: 75%;
+
+}
+
+.data-activity {
+    border-radius: 30px;
+    background-color: wheat;
+    margin-top: 20px;
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+}
+
+.data-activity-user {
+    border: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.delet-icon{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 4px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}

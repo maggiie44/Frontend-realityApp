@@ -1,0 +1,16 @@
+.model-container {
+    height: 67vh;
+    z-index: 100;
+    background-color: wheat;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    border-radius: 60px;
+    
+}
+.modal-position{
+    display: flex;
+    justify-content: center;
+}

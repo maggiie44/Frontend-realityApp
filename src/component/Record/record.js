@@ -3,10 +3,14 @@ import './record.css'
 // import { useUserRecords } from '../../hook'
 // import {getRecords} from '../../api/index'
 import Axios from 'axios';
+import Modal from './modal/Modal';
+import ListRecord from './ListRecord/ListRecord';
 
 const Record =(props) =>{
 
     const [formRecords,setFormRecords] = useState([]);
+    const [modalEditOpen, setModalEditOpen] = useState(false);
+   const [modelID, setModelID] = useState();
 
     useEffect(() => {
       Axios({
@@ -23,8 +27,9 @@ const Record =(props) =>{
 
 
     return (
-        
         <div className='BoxDown'>
+         {modalEditOpen ? <Modal setModalEditOpen={setModalEditOpen} modelID={modelID}/> :
+      (<>
             <div className='record-title'>
             <div className='record-box'>
         <div className='data-activity'>
@@ -39,6 +44,9 @@ const Record =(props) =>{
           </div>&nbsp;|&nbsp;
           <div className='data-activity-user'>
             CALORIES
+          </div>&nbsp;|&nbsp;
+          <div className='data-activity-user'>
+            Edit
           </div>&nbsp;&nbsp;
         </div>
         </div>
@@ -46,41 +54,32 @@ const Record =(props) =>{
 
         
         {formRecords.map((mockData)=>{
-              const deletActivity=()=>{
-                Axios({
-                  method:"DELETE",
-                  withCredentials:true,
-                  url:`http://localhost:4000/users/me/records/${mockData._id}`
-                }).then((res) => {
-                  console.log(res.data);
-                  window.location.reload(false);
-                })
-              }
+              // const deletActivity=()=>{
+              //   Axios({
+              //     method:"DELETE",
+              //     withCredentials:true,
+              //     url:`http://localhost:4000/users/me/records/${mockData._id}`
+              //   }).then((res) => {
+              //     console.log(res.data);
+              //     window.location.reload(false);
+              //   })
+              // }
             return(
-                <div className='record' key={mockData._id}>
-                <div className='record-box'>
-                <div className='data-activity'>
-                    <div className='data-activity-user'>
-                        {mockData.timestamp&&mockData.timestamp.slice(0,10)}
-                    </div>&nbsp;|&nbsp;
-                    <div className='data-activity-user'>
-                        {mockData.activityName}
-                    </div>&nbsp;|&nbsp;
-                    <div className='data-activity-user'>
-                        {mockData.duration}
-                    </div>&nbsp;|&nbsp;
-                    <div className='data-activity-user'>
-                        {mockData.calories}
-                    </div>
-                </div>
-                
-                </div>
-                    <div >
-                      <button className='delet-icon' onClick={deletActivity}>X</button>
-                    </div>
-                </div>
+              <ListRecord 
+              key={mockData._id}
+              id={mockData._id} 
+              actName={mockData.activityName}
+              date={mockData.timestamp}
+              duration={mockData.duration}
+              calories={mockData.calories}
+              description={mockData.description}
+             //  setModalEditOpen={setModalEditOpen}
+             setModalEditOpen={setModalEditOpen}
+             modalEditOpen={modalEditOpen}
+             setModelID={setModelID}
+               />  
             )})}
-    
+         </>)}
     </div>
     )
     

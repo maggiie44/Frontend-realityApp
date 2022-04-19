@@ -9,7 +9,7 @@ const InputAc =(props)=>{
 
     const submit = () => {
         const hr = Math.floor(props.form.hr*60);
-        const mn = hr+props.form.mn;
+        const mn = parseInt(hr)+parseInt(props.form.mn);
         axios({
             method: "POST",
             data: {

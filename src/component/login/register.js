@@ -9,6 +9,7 @@ function Register (){
   const [registerPassword,setRegisterPassword] = useState('')
   const [registerDisplayname, setRegisterDisplayname] = useState('')
 
+
   let navigate = useNavigate()
   const register =() =>{
       axios.post('http://localhost:4000/users/register',{
@@ -26,7 +27,11 @@ function Register (){
   }
 
 
-    return(<div className="container login-page">
+
+
+    return(
+    <form>
+    <div className="container login-page">
      <div className="form-group">
           <label >Username</label>
           <input type="text" name="username" placeholder="username" onChange={(e)=>setRegisterUsername(e.target.value)}/>
@@ -39,14 +44,16 @@ function Register (){
 
     <div className="form-group">
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" placeholder="password" onChange={(e)=>setRegisterPassword(e.target.value)}/>
+          <input type="password" name="password" placeholder="password" onChange={(e)=>setRegisterPassword(e.target.value)}
+          />
+          
         </div>
 
         <button type="button" className="btn" onClick={register}>
         Register
       </button>
     </div>
-        
+      </form>  
     )
 }
 

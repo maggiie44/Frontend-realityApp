@@ -15,8 +15,8 @@ const Record =(props) =>{
     useEffect(() => {
       Axios({
         method: "GET",
+        url: "https://backend-reality-app.vercel.app/users/me/records",
         withCredentials: true,
-        url: "http://localhost:4000/users/me/records",
       }).then((res) => {
         setFormRecords(res.data);
         console.log(res.data);
@@ -46,7 +46,7 @@ const Record =(props) =>{
             CALORIES
           </div>&nbsp;|&nbsp;
           <div className='data-activity-user'>
-            Edit
+            Detail
           </div>&nbsp;&nbsp;
         </div>
         </div>
@@ -54,16 +54,7 @@ const Record =(props) =>{
 
         
         {formRecords.map((mockData)=>{
-              // const deletActivity=()=>{
-              //   Axios({
-              //     method:"DELETE",
-              //     withCredentials:true,
-              //     url:`http://localhost:4000/users/me/records/${mockData._id}`
-              //   }).then((res) => {
-              //     console.log(res.data);
-              //     window.location.reload(false);
-              //   })
-              // }
+     
             return(
               <ListRecord 
               key={mockData._id}

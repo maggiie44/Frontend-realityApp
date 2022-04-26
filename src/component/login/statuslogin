@@ -1,9 +1,0 @@
-import './login'
-
-const LoginStatus =() =>{
-    return (
-    <p className='text-alert'> Invalid Username or Password</p>
-    )
-}
-
-export default LoginStatus

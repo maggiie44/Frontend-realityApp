@@ -24,7 +24,7 @@ function Profile(props) {
       axios({
           method: "GET",
           withCredentials: true,
-          url: "http://localhost:4000/users/me",
+          url: "https://backend-reality-app.vercel.app/users/me",
           }).then((res) => {
           setData(res.data); 
           setGoal(res.data.durationGoal)
@@ -38,7 +38,7 @@ function Profile(props) {
       axios({
         method: "GET",
         withCredentials: true,
-        url: "http://localhost:4000/users/me",
+        url: "https://backend-reality-app.vercel.app/users/me",
         }).then((res) => {
           if(isMounted) setData(res.data);      
         });

@@ -21,7 +21,7 @@ const InputAc =(props)=>{
       
             },
             withCredentials: true,
-            url: "http://localhost:4000/users/me/records",
+            url: "https://backend-reality-app.vercel.app/users/me/records",
           })
             .then((response) => {
               console.log(response);

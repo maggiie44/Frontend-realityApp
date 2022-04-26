@@ -25,7 +25,7 @@ function ListRecord({id,actName,date,duration,calories,setModalEditOpen,modalEdi
         </div>|
         <div className='data-activity-user'>
         {/* <button className="iconModal" onClick={() => {setModalEditOpen(true)}}><FontAwesomeIcon icon={faSquarePen} size="lg" border className="colorFontAS"/></button>&nbsp; */}
-        <button className="iconModal" onClick={openModal}>Edit</button>
+        <button className="detail-btn" onClick={openModal}>Detail</button>
         </div>
         
       </div>

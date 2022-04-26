@@ -1,7 +1,7 @@
 import { Link,useNavigate } from "react-router-dom"
 import React, { useState } from 'react'
 import axios from "axios"
-import LoginStatus from "./statuslogin"
+
 import './login.css' 
 import { invalid } from "joi"
 
@@ -20,7 +20,7 @@ function LoginPage (props){
             password: userPassword,
           },
           withCredentials: true,
-          url: "http://localhost:4000/users/login",
+          url: "https://backend-reality-app.vercel.app/users/login",
         }).then((res) => {
           console.log(res.data);
           if(res.data === "Successfully Authenticated"){

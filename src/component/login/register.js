@@ -21,7 +21,7 @@ function Register (){
 
   let navigate = useNavigate()
   const register =() =>{
-      axios.post('http://localhost:4000/users/register',{
+      axios.post('https://backend-reality-app.vercel.app/users/register',{
           
             username:registerUsername,
             password:registerPassword,

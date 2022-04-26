@@ -21,7 +21,7 @@ const ProfileData =(props) =>{
               caloriesGoal: props.profileData.calGoal
             },
             withCredentials: true,
-            url: "http://localhost:4000/users/edit",
+            url: "https://backend-reality-app.vercel.app/users/edit",
           }).then((res) => {
             // console.log(res);
           });
@@ -47,7 +47,7 @@ const ProfileData =(props) =>{
         axios({
             method:"DELETE",
             withCredentials:true,
-            url:'http://localhost:4000/users/logout'
+            url:'https://backend-reality-app.vercel.app/users/logout'
         })
         props.setIsLogin(false);
         setData(null)

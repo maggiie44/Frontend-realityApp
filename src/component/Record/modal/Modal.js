@@ -27,7 +27,7 @@ function Modal(props) {
     axios({
       method: "GET",
       withCredentials: true,
-      url: `http://localhost:4000/users/me/records/${searchID}`,
+      url: `https://backend-reality-app.vercel.app/users/me/records/${searchID}`,
       }).then((res) => {
         if(isMounted) setData(res.data);  
       });
@@ -39,7 +39,7 @@ function Modal(props) {
     await axios({
       method: "DELETE",
       withCredentials: true,
-      url: `http://localhost:4000/users/me/records/${searchID}`,
+      url: `https://backend-reality-app.vercel.app/users/me/records/${searchID}`,
     });
     props.setModalEditOpen(false)
     window.location.reload(false);
@@ -67,7 +67,7 @@ function Modal(props) {
         description: form.des,
       },
       withCredentials: true,
-      url: `http://localhost:4000/users/me/records/${searchID}`,
+      url: `https://backend-reality-app.vercel.app/users/me/records/${searchID}`,
     }).then((res) => {
       // console.log(res);
     });
@@ -115,10 +115,10 @@ function Modal(props) {
         <br/>
         <div className='model-content-btn'>
           { canEdit ? 
-          <button className='iconModal' onClick={save}>save</button>
-          : <button className='iconModal' onClick={toEdit}>Edit</button>}
-          <button className='iconModal' onClick={deletePost}>Delete</button>
-      <button className="iconModal" onClick={() => props.setModalEditOpen(false)}>Cancel</button>
+          <button className='detail-btn' onClick={save}>save</button>
+          : <button className='detail-btn' onClick={toEdit}>Edit</button>}
+          <button className='detail-btn' onClick={deletePost}>Delete</button>
+      <button className="detail-btn" onClick={() => props.setModalEditOpen(false)}>Cancel</button>
         </div>
       </div>
     </div>

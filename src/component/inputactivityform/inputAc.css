@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+
+.detail-btn{
+    border-radius: 60px;
+   
+}
 .add-form {
     border-radius: 5px;
     display: flex;

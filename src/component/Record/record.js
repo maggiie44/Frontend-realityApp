@@ -23,7 +23,7 @@ const Record =(props) =>{
         
       });
   
-    },[])
+    },[formRecords])
 
 
     return (

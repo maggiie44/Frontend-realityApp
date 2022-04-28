@@ -15,8 +15,8 @@ const Record =(props) =>{
     useEffect(() => {
       Axios({
         method: "GET",
-        url: "https://backend-reality-app.vercel.app/users/me/records",
         withCredentials: true,
+        url: "https://backend-reality-app.vercel.app/users/me/records",
       }).then((res) => {
         setFormRecords(res.data);
         console.log(res.data);

@@ -11,20 +11,23 @@ const Record =(props) =>{
     const [formRecords,setFormRecords] = useState([]);
     const [modalEditOpen, setModalEditOpen] = useState(false);
    const [modelID, setModelID] = useState();
-   const setlogin = props.setIsLogin
 
     useEffect(() => {
+      let isMounted = true;
       Axios({
         method: "GET",
         withCredentials: true,
         url: "https://backend-reality-app.vercel.app/users/me/records",
       }).then((res) => {
-        setFormRecords(res.data);
-        console.log(res.data);
+        if(isMounted){
+
+          setFormRecords(res.data);
+          console.log(res.data);
+        }
         
       });
-  
-    },[setlogin,formRecords])
+      return () => { isMounted = false }
+    },[formRecords])
 
 
     return (

@@ -11,7 +11,7 @@ const Record =(props) =>{
     const [formRecords,setFormRecords] = useState([]);
     const [modalEditOpen, setModalEditOpen] = useState(false);
    const [modelID, setModelID] = useState();
-   const [loading,setLoading] =useState(false)
+   const setlogin = props.setIsLogin
 
     useEffect(() => {
       Axios({
@@ -24,7 +24,7 @@ const Record =(props) =>{
         
       });
   
-    },[loading,formRecords])
+    },[setlogin,formRecords])
 
 
     return (

@@ -69,7 +69,7 @@ function Profile(props) {
           </div>
         </div>
           {/* <Goal goal={goal} calGoal={calGoal}/> */}
-        <Record/>
+        <Record setIsLogin={props.setIsLogin}/>
       </div>
     )
   }

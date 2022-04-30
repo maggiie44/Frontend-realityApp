@@ -13,21 +13,15 @@ const Record =(props) =>{
    const [modelID, setModelID] = useState();
 
     useEffect(() => {
-      let isMounted = true;
       Axios({
         method: "GET",
         withCredentials: true,
         url: "https://backend-reality-app.vercel.app/users/me/records",
       }).then((res) => {
-        if(isMounted){
-
           setFormRecords(res.data);
           console.log(res.data);
-        }
-        
       });
-      return () => { isMounted = false }
-    },[formRecords])
+    },[])
 
 
     return (
